@@ -1,4 +1,4 @@
-package bbr
+package p2c
 
 import (
 	"google.golang.org/grpc/balancer"
@@ -183,11 +183,7 @@ func (p *p2cPicker) pick(info balancer.PickInfo) (balancer.SubConn ,func(doneInf
 	} , nil
 }
 
-
-
-type p2cPickerBuilder struct {
-
-}
+type p2cPickerBuilder struct {}
 
 func (p * p2cPickerBuilder) Build(info base.PickerBuildInfo) balancer.Picker{
 	picker := &p2cPicker{
