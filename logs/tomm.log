@@ -1,0 +1,21 @@
+{"level":"info","time":"2020-07-18T09:11:27.839+0800","msg":"Add Router  method is GET , path is /debug/pprof/"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/allocs"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/block"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/cmdline"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/goroutine"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/heap"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/mutex"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/profile"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/threadcreate"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /debug/pprof/trace"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /allRouter"}
+{"level":"info","time":"2020-07-18T09:11:27.846+0800","msg":"Add Router  method is GET , path is /token/getToken"}
+{"level":"info","time":"2020-07-18T09:11:27.847+0800","msg":"Add Router  method is GET , path is /token/verifyToken"}
+{"level":"info","time":"2020-07-18T09:11:27.847+0800","msg":"Add Router  method is GET , path is /token/getUserInfo"}
+{"level":"info","time":"2020-07-18T09:11:27.848+0800","msg":"Add Router  method is GET , path is /token/getCode"}
+{"level":"info","time":"2020-07-18T09:11:27.849+0800","msg":"Add Router  method is GET , path is /token/checkCode"}
+{"level":"info","time":"2020-07-18T09:11:27.849+0800","msg":"Add Router  method is POST , path is /platform/register"}
+{"level":"info","time":"2020-07-18T09:11:27.850+0800","msg":"Add Router  method is GET , path is /platform/checkPlatformName"}
+{"level":"info","time":"2020-07-18T09:11:27.850+0800","msg":"Http Server Start Addr is :8086"}
+{"level":"debug","time":"2020-07-18T09:17:04.083+0800","msg":"RunServer ListenAndServer Err is http: Server closed "}
+{"level":"info","time":"2020-07-18T09:17:04.084+0800","msg":"Http Serve Stop Addr is :8086"}

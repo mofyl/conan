@@ -1,0 +1,37 @@
+server:
+  network: "tcp"
+  addr: ":8086"
+  idleTimeout: 3600 # 3600s 1*Hour
+  readTimeout: 180 # 10min
+  writeTimeout: 180 # 3min
+  notifyChan: 100
+redis:
+  addr: "127.0.0.1:6379"
+#  userName: "redis"
+  pwd: "123456"
+  db: 0
+  idleTimeout: 300 # 5*60 单位s
+  writeTimeout: 3
+  dialTimeout: 5
+  readTimeout: 3
+  minExpTime: 180 # 3*60 单位s
+mysql:
+  addr: "127.0.0.1:3306"
+  userName: "root"
+  pwd: "123456"
+  dbName: "platform"
+  maxOpenConn: 10
+  maxIdleConn: 4
+  connLiftTime: 3600 # 单位为秒 1* 3600 1Hour
+privateKey : # 单位为秒
+  expTime :  7200 #2 * 3600
+log:
+  level: "DEBUG"
+  outFile: true
+  logFormat: "JSON"
+  filePath: ""
+pool:
+  workerNum: 10
+  workerContent: 100
+mmServer: http://127.0.0.1:8065/plugins/workorder/
+

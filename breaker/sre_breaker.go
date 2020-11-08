@@ -2,7 +2,7 @@ package breaker
 
 import (
 	"errors"
-	"lb/rolling"
+	"conan/rolling"
 	"math"
 	"math/rand"
 	"sync"

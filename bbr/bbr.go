@@ -3,8 +3,8 @@ package bbr
 import (
 	"context"
 	"errors"
-	"lb/rolling"
-	cpustate "lb/sys/cpu"
+	"conan/rolling"
+	cpustate "conan/sys/cpu"
 	"math"
 	"sync/atomic"
 	"time"

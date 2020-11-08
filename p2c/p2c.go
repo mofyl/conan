@@ -131,7 +131,8 @@ func (p *p2cPicker) pick(info balancer.PickInfo) (balancer.SubConn ,func(doneInf
 		if start - pick > forceGap && atomic.CompareAndSwapInt64(&uPc.pick , uPc.pick , start) {
 			pc = uPc
 		}
-
+		// 这里表示不是 强制选择的情况
+		// 非强制选择 需要更新pick的值
 		if pc != uPc{
 			atomic.StoreInt64(&pc.pick , start)
 		}

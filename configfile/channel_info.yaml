@@ -1,0 +1,8 @@
+channel_12:
+  channelName: "workOrder"
+  channelID: "1234"
+  loginUrl: "http://www.baidu.com"
+channel_132:
+  channelName: "workOrder111"
+  channelID: "qweqw"
+  loginUrl: "http://www.baidu.com"
