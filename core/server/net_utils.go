@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 	"conan/core/server/rending"
-	"conan/ecode"
+	//"conan/ecode"
 )
 
 var (
@@ -19,29 +19,29 @@ func init() {
 	cli.Timeout = 5 * time.Second
 }
 
-func HttpCode(c *Context, msgs ecode.ErrMsgs) {
-	c.Json(nil, msgs)
-}
-
-func HttpData(c *Context, data interface{}) {
-	c.Json(data, ecode.OK)
-}
-
-func BackCode(urlStr string, code ecode.ErrMsgs) (*http.Response, error) {
-	return HttpJsonPost(urlStr, &rending.Json{
-		Code: code.Code(),
-		Msg:  code.Error(),
-		Data: nil,
-	})
-}
-
-func BackData(urlStr string, data interface{}) (*http.Response, error) {
-	return HttpJsonPost(urlStr, &rending.Json{
-		Code: ecode.OK.Code(),
-		Msg:  ecode.OK.Error(),
-		Data: data,
-	})
-}
+//func HttpCode(c *Context, msgs ecode.ErrMsgs) {
+//	c.Json(nil, msgs)
+//}
+//
+//func HttpData(c *Context, data interface{}) {
+//	c.Json(data, ecode.OK)
+//}
+//
+//func BackCode(urlStr string, code ecode.ErrMsgs) (*http.Response, error) {
+//	return HttpJsonPost(urlStr, &rending.Json{
+//		Code: code.Code(),
+//		Msg:  code.Error(),
+//		Data: nil,
+//	})
+//}
+//
+//func BackData(urlStr string, data interface{}) (*http.Response, error) {
+//	return HttpJsonPost(urlStr, &rending.Json{
+//		Code: ecode.OK.Code(),
+//		Msg:  ecode.OK.Error(),
+//		Data: data,
+//	})
+//}
 
 func HttpJsonPost(urlStr string, data *rending.Json) (*http.Response, error) {
 

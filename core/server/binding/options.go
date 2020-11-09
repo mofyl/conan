@@ -2,7 +2,7 @@ package binding
 
 import (
 	"strings"
-	"conan/ecode"
+	//"conan/ecode"
 	"conan/utils"
 )
 
@@ -51,7 +51,8 @@ func CheckOptions(op option, val []string) error {
 
 func checkRequire(value []string) error {
 	if value == nil || len(value) <= 0 || utils.RemoveSpace(value[0]) == "" {
-		return ecode.ParamFail
+		//return ecode.ParamFail
+		return nil
 	}
 	return nil
 }

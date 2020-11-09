@@ -8,7 +8,7 @@ import (
 	"math/rand"
 	"time"
 	"conan/config"
-	"conan/ecode"
+	//"conan/ecode"
 	"conan/log"
 )
 
@@ -131,7 +131,8 @@ func Get(ctx context.Context, key string, data interface{}) error {
 	//}
 	// TODO
 	if res.Val() == "" {
-		return ecode.NotValue
+		//return ecode.NotValue
+		return nil
 	}
 
 	return res.Scan(data)
@@ -169,8 +170,8 @@ func HGet(ctx context.Context, key string, field string, value interface{}) erro
 
 	// TODO
 	if cmd.Val() == "" {
-		return ecode.NotValue
-
+		//return ecode.NotValue
+		return nil
 	}
 	return cmd.Scan(value)
 }

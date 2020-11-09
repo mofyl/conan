@@ -1,15 +1,14 @@
 package server
 
 import (
+	"conan/core/server/binding"
+	"conan/core/server/rending"
 	"context"
-	"errors"
 	"fmt"
 	"math"
 	"net/http"
 	"runtime"
-	"conan/core/server/binding"
-	"conan/core/server/rending"
-	"conan/ecode"
+	//"conan/ecode"
 	"conan/log"
 )
 
@@ -30,7 +29,7 @@ type Context struct {
 
 	Method     string
 	RouterPath string
-	Err        ecode.ErrMsgs
+	//Err        ecode.ErrMsgs
 }
 
 func (c *Context) Abort() {
@@ -71,9 +70,9 @@ func (c *Context) Render(code int, render rending.Render) error {
 	if code != http.StatusOK {
 		c.Status(code)
 	}
-	if c.Err != nil {
-
-	}
+	//if c.Err != nil {
+	//
+	//}
 	err := render.Render(c.Res)
 	if err != nil {
 		log.Error("Context: Write Response Err is %s ", err.Error())
@@ -89,24 +88,24 @@ func (c *Context) Render(code int, render rending.Render) error {
 func (c *Context) Json(data interface{}, err error) error {
 	code := http.StatusOK
 
-	var eCode ecode.ErrMsgs
-	var ok bool
-	if err == nil {
-		eCode = ecode.OK
-		ok = true
-	} else {
-		eCode, ok = err.(ecode.ErrMsgs)
-		if !ok {
-			log.Error("Context Json Fail Convert Err Fail")
-			return errors.New("Context Json Fail Convert Err Fail")
-		}
+	//var eCode ecode.ErrMsgs
+	//var ok bool
+	//if err == nil {
+	//	eCode = ecode.OK
+	//	ok = true
+	//} else {
+	//	eCode, ok = err.(ecode.ErrMsgs)
+	//	if !ok {
+	//		log.Error("Context Json Fail Convert Err Fail")
+	//		return errors.New("Context Json Fail Convert Err Fail")
+	//	}
+	//
+	//}
 
-	}
-
-	c.Err = eCode
+	//c.Err = eCode
 	return c.Render(code, &rending.Json{
-		Code: eCode.Code(),
-		Msg:  eCode.Error(),
+		//Code: eCode.Code(),
+		//Msg:  eCode.Error(),
 		Data: data,
 	})
 
